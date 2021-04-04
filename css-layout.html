@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS layout</title>
+
+    <style>
+
+        .item1{grid-area: header;}
+        .item2{grid-area: nav;}
+        .item3{grid-area: content;}
+        .item4{grid-area: footer;}
+
+        .grid-container{
+            display: grid;
+            /* grid-template-columns: auto auto auto auto auto auto; */
+			 grid-template-rows: 120px 520px 120px;
+            grid-template-areas: 
+                'header header header header header header'
+                'nav content content content content content'
+                'nav footer footer footer footer footer'
+            ;
+        }
+
+        .grid-container > div {
+            
+            border: 1px solid green;
+            
+        }
+
+      
+    </style>
+</head>
+<body>
+    
+    <div class="grid-container">
+        <div class="item1">
+            <h1>Header</h1>
+			<p>Welcome to the CSS Layout page . This is the header section .</p>
+        </div>
+    
+        <div class="item2">
+            <h1>NAV</h1>
+			<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#html">HTML</a></li>
+  <li><a href="#css">CSS</a></li>
+  <li><a href="#layout">Learn Layout</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+        </div>
+    
+        <div class="item3">
+            <h1>Content</h1>
+			
+			<h3> What is CSS ? </h3>
+			
+			<p> Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+			
+			<p> CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.</p>
+			
+			
+        </div>
+    
+        <div class="item4">
+            <h1>Footer</h1>
+			<p>The end of CSS Layout page . This is the footer section. </p>
+        </div>
+    
+    </div>
+
+</body>
+</html>
